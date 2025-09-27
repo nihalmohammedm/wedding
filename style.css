@@ -1,0 +1,286 @@
+:root {
+  --pink: #f14e95;
+  --bg: #0a0a0a;
+  --shadow: 0 2px 2px rgba(241 78 149 / 0.5);
+  /* --shadow: 0 2px 2px rgb(0 0 0 / 0.5); */
+}
+
+i{
+  color:var(--pink);
+}
+
+body {
+  font-size: 1.2rem;
+  font-family: "Work Sans", sans-serif;
+  min-height: 2000px;
+  margin: 0;
+  padding: 0;
+  color: white;
+  background-color: var(--bg);
+  overflow-x: hidden;
+}
+
+.home .couple {
+  margin-top: 100px;
+  padding-bottom: 400px;
+}
+
+.home .couple img{
+  width:100%;
+}
+.home .couple h3 {
+  font-family: "Sacramento", sans-serif;
+  font-size:2.4rem;
+  color:var(--pink);
+}
+
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('/images/hero image.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: blur(2px);
+  /* filter: grayscale(); */
+  z-index: -1;
+}
+
+.hero h1 {
+  font-family: "Sacramento", cursive;
+  font-size: 6rem;
+  text-shadow: var(--shadow);
+  margin: 1rem 0;
+  color: white;
+}
+
+.hero h4 {
+  font-size: 1.5rem;
+  text-shadow: var(--shadow);
+}
+
+.hero p {
+  font-size: 1.4rem;
+  text-shadow: var(--shadow);
+  margin-bottom: 2rem;
+}
+
+.hero a,
+.info a  {
+  color: var(--pink);
+  background-color: white;
+  padding: 0.8rem 1.5rem;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  display: inline-block;
+  border: 2px solid white;
+}
+
+.hero a:hover,
+.info a:hover {
+  background-color: var(--pink);
+  color: white;
+  border-color: var(--pink);
+}
+
+.mynavbar {
+  background-color: rgba(255, 255, 255, 0.5) !important;
+  backdrop-filter: blur(4px);
+}
+
+.mynavbar .offcanvas{
+ height:100vh;
+}
+
+.mynavbar .navbar-brand,
+.mynavbar .offcanvas-title {
+  font-family: "Sacramento", sans-serif;
+  font-size: 3.2rem;
+  font-weight: bold;
+}
+
+.mynavbar .nav-link {
+  text-transform: uppercase;
+}
+
+.home {
+  background-image: url("https://images.unsplash.com/photo-1532712938310-34cb3982ef74?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  margin-top: -7rem;
+  padding-top: 15rem;
+}
+
+home h2,
+.info h2 {
+  color: var(--pink);
+  font-family: "Sacramento";
+  font-size: 5rem;
+  font-weight: bold;
+}
+
+.home h3,
+.info h3 {
+  color: #444444;
+  font-size: 1.5rem;
+  margin-buttom: 1rem;
+}
+
+.home p,
+.info p {
+  color: #666666;
+  font-size: 1.1rem;
+}
+
+.info {
+  background-image: url("https://images.unsplash.com/photo-1516738901171-8eb4fc13bd20?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  backdrop-filter: blur(4px);
+  height: 100vh;
+}
+
+/* Countdown Styles */
+.simply-countdown {
+  overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.25rem;
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
+  margin: 2rem 0;
+}
+
+.simply-countdown > .simply-section {
+  width: 65px;
+  height: 65px;
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(226, 232, 240, 0.8);
+  border-radius: 1rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 
+              0 2px 4px -1px rgba(0, 0, 0, 0.03), 
+              0 0 0 1px rgba(0, 0, 0, 0.02);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  backdrop-filter: blur(10px);
+}
+
+.simply-countdown > .simply-section > div {
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+  align-items: center;
+}
+
+.simply-countdown > .simply-section .simply-amount {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1e293b;
+  line-height: 1.2;
+  letter-spacing: -0.025em;
+}
+
+.simply-countdown > .simply-section .simply-word {
+  font-size: 0.6rem;
+  font-weight: 500;
+  color: #64748b;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+/* Responsive Breakpoints */
+@media (min-width: 640px) {
+  .simply-countdown > .simply-section {
+    width: 75px;
+    height: 75px;
+    padding: 1.75rem;
+  }
+
+  .simply-countdown > .simply-section .simply-amount {
+    font-size: 1.75rem;
+  }
+
+  .simply-countdown > .simply-section .simply-word {
+    font-size: 0.75rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .simply-countdown > .simply-section {
+    width: 90px;
+    height: 90px;
+    padding: 2rem;
+  }
+
+  .simply-countdown > .simply-section .simply-amount {
+    font-size: 2rem;
+  }
+
+  .simply-countdown > .simply-section .simply-word {
+    font-size: 0.8rem;
+  }
+}
+
+/* Device-specific adjustments */
+@media (max-width: 992px) {
+  html {
+    font-size: 75%;
+  }
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 65%;
+  }
+  
+   .mynavbar .nav-link {
+    font-size: 2rem;
+    text-align: center;
+    margin: 8px;
+  }
+  
+  .hero h1 {
+    font-size: 4.5rem;
+  }
+}
+
+@media (max-width: 576px) {
+  html {
+    font-size: 60%;
+  }
+  
+  .hero h1 {
+    font-size: 3.5rem;
+  }
+  
+  .simply-countdown {
+    gap: 0.75rem;
+  }
+  
+  .simply-countdown > .simply-section {
+    width: 55px;
+    height: 55px;
+    padding: 1rem;
+  }
+}
